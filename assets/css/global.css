@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg, #9b34ef 0%, #490cb0 20%, transparent 50%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg, #5516ba, rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+    
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Animations*/
+
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes wiggle {
+    0%, 10%{
+        transform: rotate(0);
+    }
+    15%{
+        transform: rotate(-15deg);
+    }
+    20%{
+        transform: rotate(10deg);
+    }
+    25%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: rotate(10deg);
+    }
+    35%{
+        transform: rotate(-10deg);
+    }
+    40%, 100%{
+        transform: rotate(0);
+    }
+
+}
+
+body{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    height: 100vh;
+}
+
+img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+p{
+    font-family: "Quicksand", sans-serif;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+main {
+    background: url(../images/background-subscription.png) no-repeat;
+    background-size: cover;
+}
+
+/*Menu Styles*/
+.menu{
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bg-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.menu__logo{
+    max-width: 160px;
+}
+
+.menu__logo--image{
+    width: 100%;
+}
+
+/*Menu items styles*/
+.menu__item{
+    margin-right: 24px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu__item--button{
+    padding: 8px 26px;
+    transition: background 1s, color 1s;
+}
+
+.button{
+    padding: 16px 10px;
+    background-color: var(--tertiary-color);
+    border-radius: 500px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.button.button--gradient{
+    background: var(--btn-bg-color-gradient);
+    outline: 3px solid transparent;
+    transition: background 1s, outilne 1s, transform 1s;
+    background-size: 250%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}
+
+.content {
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    font-family: "Quicksand", cursive;
+    width: 100%;
+    height: 70%;
+    padding: 24px;
+}
+
+
+@media screen and (max-width: 480px){
+    .menu{
+        flex-direction: column;
+        padding: 32px 24px;
+        gap: 24px;
+    }
+
+    .menu__logo{
+        max-width: 100px;
+    }
+
+    .menu__item--button{
+        margin: 0;
+    }
+
+    .header{
+        margin-top: 128px !important;
+    }
+
+    .subscription__card {
+        padding: 40px;
+    }
+
+    .subscription__plan {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .subscription__plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscription__card {
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .subscription__plans {
+        gap: 40px;
+    }
+}
+/* Footer */
+
+.footer__link {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: var(--link-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 14px;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+    font-size: 0.875rem;
+  }
+  
+  .footer__link:hover {
+    color: var(--text-color);
+  }
+  
+  .footer__legal {
+    font-size: 0.75rem;
+    margin: 16px 0;
+    color: var(--link-color);
+  }
+  
+  .footer__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 80px;
+}
+
+/* Custom Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+  }
