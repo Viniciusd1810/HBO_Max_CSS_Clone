@@ -3,7 +3,7 @@
 ## Project Demonstration
 Git Page: https://viniciusd1810.github.io/HBO_Max_CSS_Clone/
 
-### Index Page
+## Mobile View
 
-### Sing In Page
 
+## Desktop View
