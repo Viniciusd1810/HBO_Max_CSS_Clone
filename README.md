@@ -7,4 +7,4 @@ Git Page: https://viniciusd1810.github.io/HBO_Max_CSS_Clone/
 
 
 ## Desktop View
-![Alt text](assets/readme/Desktop View.gif)
+![image](https://github.com/user-attachments/assets/466a42e0-c938-4826-8503-5254bc5b99cb)
